@@ -1,0 +1,18 @@
+<div class="w-full flex justify-center mt-10 mb-2">
+  
+  <div >
+    <button mat-raised-button color="accent" (click)="this.mostrarMujer = !this.mostrarMujer" class="mt-10 ml-20 mb-5">{{mostrarMujer ? 'Ocultar Mujer' : 'Mostar Mujer'}}</button>
+      <div class="w-1/2 mx-auto">
+        <img *ngIf="mostrarMujer == true" src="assets\img\ginny.webp" alt="Imagen de un una mujer" class="w-full">
+      </div>
+  </div>
+
+  <div>
+    <button mat-raised-button color="primary" (click)="this.mostrarHombre = !this.mostrarHombre" class="mt-10 ml-20 mb-5">{{mostrarHombre ? 'Ocultar Hombre' : 'Mostar Hombre'}}</button>
+      <div class="w-1/2 mx-auto">
+        <img *ngIf="mostrarHombre == true" src="assets\img\tom.webp" alt="Imagen de un hombre" class="w-full">
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
